@@ -1,0 +1,277 @@
+// Color
+$default-theme: #2185D0;
+$white: #fff;
+$black: #212121;
+
+.ui {
+  &.ihram-section-header, 
+  &.ihram-section-content, 
+  &.ihram-section-footer {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+  &.segment {
+    background: transparent;
+  }
+  &.ihram-section-footer {
+    a.item {
+      color: #fff;
+    }
+    color: #fff;
+    background: #073f4c;
+    padding-top: 30px;
+  }
+  &.ihram-packet-container {
+    border-top: 2px solid #d7d7d7;
+  }
+  &.ihram-featured {
+    margin: 50px 0;
+  }
+  // menu
+  &.ihram-menu.menu {
+    a.item {
+      border-radius: 0;
+      padding-left: 1px;
+      padding-right: 25px;
+      font-weight: 400;
+      padding-bottom: 2px;
+      position: relative;
+      color: $white;
+      &.mobile-logo, &.toc {
+        display: none;
+      }
+      &.ihram-btn {
+        border: 1px solid $white;
+        border-radius: 20px;
+        padding: 8px 20px;
+        margin-top: 8px;
+        &:hover {
+          background: rgba(255, 255, 255, 0.19);
+        }
+      }
+      &.ihram-logo {
+        padding: 7px 0;
+        img {
+          width: 150px;
+        }
+        &.mobile-logo {
+          img {
+            width: 100px;
+          }
+        }
+      }
+      .ihram-menu-mark {
+        position: absolute;
+        width: 30px;
+        bottom: -5px;
+        border-bottom: 2px solid transparent;
+      }
+      &:hover {
+        color: $white;
+        background: transparent;
+        .ihram-menu-mark {
+          border-color: $default-theme;
+        }
+      }
+      &.active {
+        color: $white;
+        border-radius: 0;
+        background: transparent;
+        .ihram-menu-mark {
+          border-color: $default-theme;
+        }
+        &:hover {
+          color: $white;
+          background: transparent;
+        }
+      }
+    }
+  }
+  &.ihram-btn {
+    border: 1px solid $white;
+    border-radius: 20px;
+    background: transparent;
+    color: $white;
+    &.inverted {
+      color: $black;
+      border-color: $black;
+      &:hover {
+        color: $default-theme;
+        border-color: $default-theme;
+      }
+    }
+    &:hover {
+      color: $white;
+      background: rgba(255, 255, 255, 0.19);
+    }
+  }
+  // header
+  &.ihram-header {
+    font-size: 4.037468rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  &.ihram-sub-header {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  &.ihram-bg {
+    padding-top: 150px;
+    min-height: 650px;
+  }
+  &.ihram-form.selection.dropdown {
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    color: $white;
+    .text:not(.default), .search {
+      color: $white;
+      &:focus {
+        color: $white;
+      }
+    }
+    &.active {
+      color: $white;
+      border-color: transparent;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h1, h2 {
+    font-weight: 700;
+  }
+  // Description
+  &.ihram-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &.ihram-featured-header {
+    display: inline-block;
+    text-align: left;
+    padding-left: 5px;
+    font-size: 3rem;
+    line-height: 3.3rem;
+    font-weight: 700;
+    vertical-align: middle;
+    width: 50%;
+    .ihram-featured-sub {
+      font-size: 1.0234rem;
+      line-height: 1.2rem;
+    }
+  }
+  &.ihram-icon.image {
+    width: 120px;
+  }
+  &.ihram-card-full {
+    width: 100%;
+    h3 {
+      margin: 0;
+    }
+  }
+  &.ihram-packet-card:hover {
+    outline: 2px solid $default-theme;
+  }
+  &.ihram-packet-card:last-child {
+    margin-bottom: 2em;
+  }
+  &.stackable.grid {
+    .ihram-img.column:not(.row) {
+      padding: 0 !important;
+    }
+  }
+  .ihram-img {
+    height: 150px;
+    border-top-left-radius: 0.28571429rem;
+    border-bottom-left-radius: 0.28571429rem;
+    overflow: hidden;
+  }
+  &.ihram-copyright {
+    margin: 10px 0;
+    padding: 15px 0;
+    border-top: 0.18rem solid #1e7083;
+  }
+  &.fixed.menu.ihram-fixed-menu {
+    top: 0;
+    transition: top ease 0.6s;
+    &.slidetop {
+      top: -40px;
+    }
+  }
+
+  .ihram-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    small {
+      font-size: 1.2rem;
+      vertical-align: top;
+      line-height: 12px;
+    }
+  }
+  .ihram-fasilitas {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .star.rating {
+    .active.icon, .active.icon:hover {
+      text-shadow: none !important;
+    }
+  }
+  &.ihram-error {
+    &.full {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.4);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+      a {
+        cursor: pointer
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .ui {
+    &.ihram-menu.menu {
+      a.item {
+        display: none;
+        &.mobile-logo, &.toc {
+          display: block;
+        }
+      }
+    }
+    &.ihram-bg {
+      padding-top: 70px;
+      min-height: 500px;
+    }
+    &.ihram-header {
+      font-size: 3.3rem;
+    }
+    &.ihram-sub-header {
+      font-size: 1.1rem;
+    }
+    h1, &.ihram-featured-header {
+      font-size: 1.8rem;
+    }
+    &.ihram-icon.image {
+      width: 80px;
+      display: block;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &.ihram-featured {
+      margin: 20px 0;
+    }
+    &.ihram-featured-header {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<ihram-nav-fixed nav-data="$ctrl.nav"></ihram-nav-fixed>
+
+<div id="app-container">
+	<ihram-nav-mobile nav-data="$ctrl.nav" class="ui vertical inverted sidebar menu left"></ihram-nav-mobile>
+	<div class="pusher">
+	    <div class="ui inverted center aligned ihram-section-header segment" style="{{$ctrl.header.banner}}">
+	        <ihram-nav nav-data="$ctrl.nav"></ihram-nav>
+	        <ihram-header header-data="$ctrl.header"></ihram-header>
+	    </div>
+		<div class="ui ihram-section-content segment">
+			<ihram-description description-data="$ctrl.description"></ihram-description>
+			<ihram-featured featured-data="$ctrl.featured"></ihram-featured>
+			<ihram-title></ihram-title>
+			<ihram-packet packet-data="$ctrl.packet"></ihram-packet>
+		</div>
+		<div class="ui ihram-section-footer segment">
+			<ihram-footer footer-data="$ctrl.footer"></ihram-footer>
+		</div>
+	</div>
+</div>
+
+<div class="ui ihram-error full" ng-if="!$ctrl.nav">
+</div>

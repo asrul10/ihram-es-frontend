@@ -1,0 +1,19 @@
+<div class="ui card ihram-card-full ihram-packet-card">
+    <div class="content">
+        <div class="ui stackable grid">
+            <div class="nine wide ihram-img column">
+                <a class="header ihram-price"><img ng-src="{{$ctrl.cardData.banner}}" style="width: 100%"></a>
+            </div>
+            <div class="seven wide column">
+                <a class="header ihram-price">{{$ctrl.cardData.harga}}<small>{{$ctrl.cardData.hargaChild}}</small></a>
+                <div class="meta">
+                    <span class="date">{{$ctrl.cardData.date}}</span>
+                </div>
+                <div class="description">
+                    <h3>{{$ctrl.cardData.program}}</h3>
+                    <span class="ihram-fasilitas">Fasilitas</span> <div class="ui star rating" data-rating="{{$ctrl.cardData.fasilitas}}" data-max-rating="5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
