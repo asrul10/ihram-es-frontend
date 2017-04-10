@@ -1,4 +1,4 @@
-function mainController($http) {
+function profileController($http) {
 	var ctrl = this;
 
 	$http({
@@ -7,6 +7,7 @@ function mainController($http) {
 	}).then(getData, errorData);
 
 	function getData(response) {
+		console.log(response.data);
 		var data = response.data;
 		var content = data.content;
 
@@ -60,9 +61,9 @@ function mainController($http) {
 
 angular
     .module('app')
-    .component('app', {
-        templateUrl: 'app/main.html',
-        controller: mainController
+    .component('profile', {
+        templateUrl: 'app/profile.html',
+        controller: profileController
     });
 
 // Jquery

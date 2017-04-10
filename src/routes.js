@@ -12,8 +12,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 			url: '/',
 			component: 'app'
 		})
-		.state('hello', {
-			url: '/hello',
-			component: 'ihramFooter'
+		.state('profile', {
+			url: '/profile',
+			component: 'profile'
 		});
 }

@@ -23,9 +23,6 @@ $black: #212121;
     background: #073f4c;
     padding-top: 30px;
   }
-  &.ihram-packet-container {
-    border-top: 2px solid #d7d7d7;
-  }
   &.ihram-featured {
     margin: 50px 0;
   }
@@ -44,7 +41,7 @@ $black: #212121;
       }
       &.ihram-btn {
         border: 2px solid $white;
-        border-radius: 20px;
+        border-radius: 2rem;
         padding: 8px 20px;
         margin-top: 8px;
         &:hover,
@@ -92,7 +89,7 @@ $black: #212121;
   }
   &.ihram-btn {
     border: 0.15rem solid $white;
-    border-radius: 20px;
+    border-radius: 2rem;
     background: transparent;
     color: $white;
     &.default {
@@ -127,10 +124,11 @@ $black: #212121;
   // header
   &.ihram-header {
     font-size: 4.037468rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 0;
   }
   &.ihram-sub-header {
+    font-weight: 400;
     font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 60px;
@@ -165,15 +163,19 @@ $black: #212121;
     font-weight: 700;
   }
   // Description
+  &.ihram-desc p {
+    line-height: 1.5;
+    font-size: 1.14rem;
+  }
   &.ihram-padding {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 5.7rem;
+    padding-bottom: 2.7rem;
   }
   &.ihram-featured-header {
     display: inline-block;
     text-align: left;
     padding-left: 5px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.8rem;
     font-weight: 700;
     vertical-align: middle;
