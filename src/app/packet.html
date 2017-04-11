@@ -6,6 +6,7 @@
         <ihram-filter></ihram-filter>
     </div>
     <div class="ten wide column">
-        <ihram-packet-cards cards-data='$ctrl.packetData.items'></ihram-packet-cards>
+        <ihram-packet-cards cards-data='$ctrl.packetData'></ihram-packet-cards>
+        <button class="fluid ui button" ng-class="$ctrl.loading" ng-click="$ctrl.loadMore()">Berikutnya</button>
     </div>
 </div>

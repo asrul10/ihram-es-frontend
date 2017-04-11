@@ -3,8 +3,16 @@ $default-theme: #2185D0;
 $default-gray: #bdbdbd;
 $white: #fff;
 $black: #212121;
+$white-gray: #f7f7f7;
+
+body {
+  background-color: $white-gray;
+}
 
 .ui {
+  &.hide {
+    display: none !important;
+  }
   &.ihram-section-header, 
   &.ihram-section-content, 
   &.ihram-section-footer {
@@ -194,8 +202,11 @@ $black: #212121;
       margin: 0;
     }
   }
+  &.ihram-card-grid {
+    border-top: 1px solid rgba(34, 36, 38, 0.15);
+  }
   &.ihram-packet-card:hover {
-    outline: 2px solid $default-theme;
+    box-shadow: 0px 2px 8px 0px $default-theme, 0px 0px 0px 1px $default-theme;
   }
   &.ihram-packet-card:last-child {
     margin-bottom: 2em;
@@ -292,6 +303,9 @@ $black: #212121;
     }
     &.ihram-featured-header {
       text-align: center;
+    }
+    &.ihram-featured-header {
+      width: 100%;
     }
   }
 }

@@ -48,13 +48,10 @@ function mainController($http) {
 			countUsers: content.featured.countUsers,
 			icons: content.featured.icons
 		};
-
-		// Packet
-		ctrl.packet = content.packet;
 	}
 
 	function errorData(response) {
-		console.log('Error 404');
+		console.log('Error');
 	}
 }
 

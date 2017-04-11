@@ -2,16 +2,90 @@
     <div class="content">
         <div class="ui stackable grid">
             <div class="nine wide ihram-img column">
-                <a class="header ihram-price"><img ng-src="{{$ctrl.cardData.banner}}" style="width: 100%"></a>
+                <a class="header ihram-price" ng-click="$ctrl.showDetail($event)"><img ng-src="{{$ctrl.cardData.banner}}" style="width: 100%"></a>
             </div>
             <div class="seven wide column">
-                <a class="header ihram-price">{{$ctrl.cardData.harga}}<small>{{$ctrl.cardData.hargaChild}}</small></a>
+                <p>Harga mulai dari</p>
+                <a class="header ihram-price" ng-click="$ctrl.showDetail($event)">{{$ctrl.cardData.harga}}<small>{{$ctrl.cardData.hargaChild}}</small></a>
                 <div class="meta">
-                    <span class="date">{{$ctrl.cardData.date}}</span>
+                    <span class="date">{{$ctrl.cardData.date}} Hari</span>
                 </div>
                 <div class="description">
                     <h3>{{$ctrl.cardData.program}}</h3>
                     <span class="ihram-fasilitas">Fasilitas</span> <div class="ui star rating" data-rating="{{$ctrl.cardData.fasilitas}}" data-max-rating="5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ui stackable grid hide ihram-card-grid">
+            <div class="five wide column">
+                <strong>Keberangkatan</strong>
+                <div class="ui list">
+                    <div class="item">
+                        <i class="plane icon"></i>
+                        <div class="content">
+                            <p>Rute Keberangkatan</p>
+                            <p>CGK - DOH - JED</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="plane icon"></i>
+                        <div class="content">
+                            <p>Rute Kepulangan</p>
+                            <p>JED - DOH - CGK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="five wide column">
+                <strong>Harga Kamar</strong>
+                <div class="ui list">
+                    <div class="item">
+                        <i class="bed icon"></i>
+                        <div class="content">
+                            <p>Double</p>
+                            <p>Rp 25.000.000,00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="bed icon"></i>
+                        <div class="content">
+                            <p>Triple</p>
+                            <p>Rp 25.000.000,00</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="bed icon"></i>
+                        <div class="content">
+                            <p>Quad</p>
+                            <p>Rp 25.000.000,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="six wide column">
+                <strong>Fasilitas</strong>
+                <div class="ui list">
+                    <div class="item">
+                        <i class="users icon"></i>
+                        <div class="content">
+                            <p>Maskapai Qatar Airways</p>
+                            <p>Tersisa 45 seat</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="building icon"></i>
+                        <div class="content">
+                            <p>Hotel Makkah</p>
+                            <p> AL - Massa</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="building icon"></i>
+                        <div class="content">
+                            <p>Hotel Madinah</p>
+                            <p>Fairoz Shatta Hotel</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
