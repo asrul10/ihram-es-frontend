@@ -8,6 +8,11 @@ function cardController() {
 		content.children('.ihram-card-grid').toggleClass('hide');
         content.find('.ihram-img').toggleClass('ihram-card-expand');
 	};
+
+    ctrl.showBooking = function(title, date) {
+        $('.ui.modal').modal('setting', 'transition', 'fade up').modal('show');
+        $('#title-card').html(title + ' ' + date + ' Hari');
+    };
 }
 
 angular

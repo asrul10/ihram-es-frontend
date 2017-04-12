@@ -17,7 +17,7 @@
                         <i class="icon rating" ng-repeat="n in star" ng-class="n <= $ctrl.cardData.fasilitas ? 'star' : 'empty star'"></i>
                     </span>
                 </div>
-                <p>Dapatkan diskon hingga Rp 500,000</p>
+                <p>Dapatkan diskon hingga Rp 500.000</p>
             </div>
         </div>
         <div class="ui stackable grid hide ihram-card-grid">
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="sixteen wide column">
-                <button class="fluid ui primary button"><i class="checked calendar icon"></i>Pesan Sekarang</button>
+                <button class="fluid ui primary button" ng-click="$ctrl.showBooking($ctrl.cardData.program, $ctrl.cardData.date)"><i class="checked calendar icon"></i>Pesan Sekarang</button>
             </div>
         </div>
     </div>
