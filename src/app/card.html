@@ -13,6 +13,9 @@
                 <div class="description">
                     <h3>{{$ctrl.cardData.program}}</h3>
                     <span class="ihram-fasilitas">Fasilitas</span>
+                    <span ng-init="star = [1,2,3,4,5];">
+                        <i class="icon rating" ng-repeat="n in star" ng-class="n <= $ctrl.cardData.fasilitas ? 'star' : 'empty star'"></i>
+                    </span>
                 </div>
                 <p>Dapatkan diskon hingga Rp 500,000</p>
             </div>

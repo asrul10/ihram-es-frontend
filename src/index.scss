@@ -253,6 +253,9 @@ body {
     color: rgba(0, 0, 0, 0.4);
   }
   .star.rating {
+    opacity: 1 !important;
+    color: #FFB70A;
+    cursor: default;
     .active.icon, .active.icon:hover {
       text-shadow: none !important;
     }
