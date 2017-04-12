@@ -65,5 +65,4 @@ angular
 // Jquery
 $(function(){
 	$('select.dropdown').dropdown();
-	$('.ui.rating').rating('disable');
 });

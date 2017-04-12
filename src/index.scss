@@ -32,7 +32,8 @@ body {
     padding-top: 30px;
   }
   &.ihram-featured {
-    margin: 50px 0;
+    margin-top: 100px;
+    margin-bottom: 80px;
   }
   // menu
   &.ihram-menu.menu {
@@ -217,10 +218,13 @@ body {
     }
   }
   .ihram-img {
-    height: 150px;
+    height: 199px;
     border-top-left-radius: 0.28571429rem;
     border-bottom-left-radius: 0.28571429rem;
     overflow: hidden;
+    &.ihram-card-expand {
+      border-bottom-left-radius: 0;
+    }
   }
   &.ihram-copyright {
     margin: 10px 0;

@@ -4,7 +4,9 @@ function cardController() {
 	ctrl.detail = true;
 
 	ctrl.showDetail = function(event) {
-		$(event.target).parents('.ihram-card-full').children('.content').children('.ihram-card-grid').toggleClass('hide');
+        var content = $(event.target).parents('.ihram-card-full').children('.content');
+		content.children('.ihram-card-grid').toggleClass('hide');
+        content.find('.ihram-img').toggleClass('ihram-card-expand');
 	};
 }
 
