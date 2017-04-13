@@ -5,69 +5,85 @@
     <div class="six wide column">
         <ihram-filter></ihram-filter>
     </div>
-    <div class="ten wide column">
+    <div class="ui ten wide column segment" ng-class="$ctrl.loading" id="list-packet">
         <ihram-packet-cards cards-data='$ctrl.packetData'></ihram-packet-cards>
         <button class="fluid ui button" ng-class="$ctrl.loading" ng-click="$ctrl.loadMore()">Berikutnya</button>
     </div>
 </div>
 
-<div class="ui modal">
+<div class="ui small modal">
     <div class="header">
         <i class="checked calendar icon"></i> Booking
     </div>
     <div class="content">
         <div class="description">
-            <div class="ui header" id="title-card"></div>
+            <div class="ui header text-left" id="title-card"></div>
+            <p>Harga Paket Sudah Termasuk Perlengkapan Umroh.</p>
+            <br>
             <div class="ui form">
+	            <h3 class="ui dividing header">Data Pribadi<a class="anchor" id="types"></a></h3>
 				<div class="field">
 				    <label>Nama</label>
-				    <div class="two fields">
-				        <div class="six field">
-				            <input type="text" placeholder="Nama">
+				    <div class="fields">
+				        <div class="seven wide field">
+				            <input type="text" placeholder="Nama lengkap">
 				        </div>
 				    </div>
 				</div>
 				<div class="field">
 				    <label>Nomor Telepon</label>
 				    <div class="fields">
-				        <div class="two wide field">
-				            <input type="text" placeholder="Code" value="+62">
-				        </div>
 				        <div class="five wide field">
-				            <input type="text" placeholder="Nomor Telepon">
+				            <input type="text" placeholder="085522277788">
 				        </div>
-				    </div>
+			        </div>
 				</div>
 				<div class="field">
 				    <label>Email</label>
 				    <div class="fields">
-				        <div class="six field">
-				            <input type="text" placeholder="Email">
+				        <div class="six wide field">
+				            <input type="text" placeholder="contoh@email.com">
 				        </div>
+					</div>
+				</div>
+				<div class="field">
+				    <label>Alamat</label>
+				    <textarea rows="2"></textarea>
+				</div>
+	            <h3 class="ui dividing header">Jumlah Jamaah<a class="anchor" id="types"></a></h3>
+				<div class="field">
+				    <label>Double</label>
+				    <div class="fields">
+				        <div class="two wide field ihram-room-field">
+						    <input type="text" placeholder="2">
+					   </div>
+				   </div>
+				</div>
+				<div class="field">
+				    <label>Triple</label>
+				    <div class="fields">
+				        <div class="two wide field ihram-room-field">
+						    <input type="text" placeholder="3">
+						</div>
+					</div>
+				</div>
+				<div class="field">
+				    <label>Quad</label>
+				    <div class="fields">
+				        <div class="two wide field ihram-room-field">
+						    <input type="text" placeholder="4">
+					    </div>
 				    </div>
 				</div>
-				<div class="fields">
-					<div class="field">
-					    <label>Double</label>
-					    <input type="text" placeholder="Double">
-					</div>
-					<div class="field">
-					    <label>Triple</label>
-					    <input type="text" placeholder="Triple">
-					</div>
-					<div class="field">
-					    <label>Quad</label>
-					    <input type="text" placeholder="Quad">
-					</div>
-				</div>
+	            <h3 class="ihram-price-total">Total <span>Rp. 10.000.000,00</span></h3>
 			</div>
         </div>
     </div>
     <div class="actions">
-        <div class="ui black deny button">
+        <div class="ui deny button">
             Kembali
         </div>
-        <div class="ui positive left labeled icon button">
+        <div class="ui positive left labeled icon button disabled">
             <i class="checkmark icon"></i>
             Selesai
         </div>

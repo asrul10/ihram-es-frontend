@@ -4,6 +4,7 @@ function packetController($http) {
 	ctrl.loading = '';
 	ctrl.packetData = [];
 	ctrl.page = 0;
+	ctrl.loading = 'loading';
 
 	$http({
 		method: 'GET',
@@ -11,6 +12,7 @@ function packetController($http) {
 	}).then(getData, errorData);
 
 	function getData(response) {
+		ctrl.loading = '';
 		ctrl.packetData = response.data;
 	}
 
