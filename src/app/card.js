@@ -1,8 +1,6 @@
 function cardController() {
 	var ctrl = this;
 	
-	ctrl.detail = true;
-
 	ctrl.showDetail = function(event) {
         var content = $(event.target).parents('.ihram-card-full').children('.content');
 		content.children('.ihram-card-grid').toggleClass('hide');

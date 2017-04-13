@@ -54,7 +54,9 @@ body {
         padding: 8px 20px;
         margin-top: 8px;
         &:hover,
-        &:active {
+        &:active, 
+        &:focus, 
+        &:visited, {
           background: rgba(255, 255, 255, 0.19);
         }
       }
@@ -128,12 +130,16 @@ body {
     &.black {
       color: $black;
       &:hover,
-      &:active {
+      &:active, 
+      &:focus, 
+      &:visited, {
         color: $black;
       }
     }
     &:hover,
-    &:active {
+    &:active, 
+    &:focus, 
+    &:visited, {
       color: $white;
       background: rgba(255, 255, 255, 0.19);
     }

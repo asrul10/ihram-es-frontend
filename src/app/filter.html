@@ -6,7 +6,7 @@
         <div class="ui form">
             <div class="field">
                 <label>Keberangkatan</label>
-                <div class="ui calendar" id="filter-tanggal">
+                <div class="ui calendar" ng-model="$ctrl.date" id="filter-tanggal">
                     <div class="ui input left icon">
                         <i class="calendar icon"></i>
                         <input type="text" placeholder="Tanggal">
@@ -15,16 +15,16 @@
             </div>
             <div class="field">
                 <label>Urutkan Packet</label>
-                <select name="group" class="ui search dropdown">
-                    <option value="Paling Sesuai">Paling Sesuai</option>
-                    <option value="Paling Murah">Paling Murah</option>
-                    <option value="Paling Mahal">Paling Mahal</option>
+                <select name="group" ng-model="$ctrl.sortPacket" class="ui search dropdown">
+                    <option value="1">Paling Sesuai</option>
+                    <option value="2">Paling Murah</option>
+                    <option value="3">Paling Mahal</option>
                 </select>
             </div>
         </div>
     </div>
     <div class="extra content">
         <button class="ui ihram-btn primary button">Tampilkan</button>
-        <button class="ui ihram-btn black default button">Reset</button>
+        <button class="ui ihram-btn black default button" ng-click="$ctrl.reset()">Reset</button>
     </div>
 </div>
