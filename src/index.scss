@@ -97,23 +97,31 @@ body {
     }
   }
   &.ihram-btn {
-    border: 0.15rem solid $white;
+    border: 2px solid $white;
     border-radius: 2rem;
     background: transparent;
     color: $white;
     &.default {
       border-color: $default-gray;
       background: transparent;
+      color: $default-gray;
       &:hover,
-      &:active {
+      &:active, 
+      &:focus, 
+      &:visited, {
+        color: $default-gray;
         background: rgba(171, 171, 171, 0.19);
       }
     }
     &.primary {
+      color: $default-theme;
       border-color: $default-theme;
       background: transparent;
       &:hover,
-      &:active {
+      &:active, 
+      &:focus, 
+      &:visited, {
+        color: $default-theme;
         background: rgba(33, 133, 208, 0.19);
       }
     }

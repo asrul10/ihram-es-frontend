@@ -1,6 +1,6 @@
 function mainController($http) {
 	var ctrl = this;
-
+	
 	$http({
 		method: 'GET',
 		url: services + '/front/data'

@@ -5,7 +5,7 @@
     <div class="six wide column">
         <ihram-filter></ihram-filter>
     </div>
-    <div class="ui ten wide column segment" ng-class="$ctrl.loading" id="list-packet">
+    <div class="ui ten wide column segment" ng-class="$ctrl.loadingPage" id="list-packet">
         <ihram-packet-cards cards-data='$ctrl.packetData'></ihram-packet-cards>
         <button class="fluid ui button" ng-class="$ctrl.loading" ng-click="$ctrl.loadMore()">Berikutnya</button>
     </div>
