@@ -160,23 +160,16 @@ body {
     padding-top: 150px;
     min-height: 650px;
   }
-  &.ihram-form.selection.dropdown {
-    border-bottom: 2px solid #fff;
-    background: transparent;
-    border-radius: 0;
-    color: $white;
-    .text:not(.default), .search {
-      color: $white;
-      &:focus {
-        color: $white;
-      }
-    }
-    &.active {
-      color: $white;
-      border-color: transparent;
-      &:hover {
-        border-color: transparent;
-      }
+  &.ihram-form {
+    border-bottom: 2px solid #fff !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    color: $white !important;
+    text-align: center;
+    &:focus {
+      border-top: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
     }
   }
   h1 {

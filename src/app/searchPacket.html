@@ -1,22 +1,9 @@
 <div class="ui two column centered stackable grid">
     <div class="four column stackable grid centered row">
         <div class="column">
-            <div class="ui form">
+            <div class="ui form calendar" id="search-tanggal">
                 <div class="field">
-                    <select name="group" ng-model="$ctrl.model.selectedGroup" ng-change="$ctrl.getProgram()" class="ui search dropdown ihram-form">
-                        <option value="">Pilih Group Keberangkatan</option>
-                        <option ng-repeat="group in $ctrl.groupData" value="{{group.id}}">{{group.name}}</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui form">
-                <div class="field">
-                    <select name="group" class="ui search dropdown ihram-form" id="ihram-select-program">
-                        <option value="">Pilih Program</option>
-                        <option ng-repeat="program in programData" value="{{program.id}}">{{program.name}}</option>
-                    </select>
+                    <input class="ui ihram-form" type="text" name="tgl" placeholder="Bulan Keberangkatan">
                 </div>
             </div>
         </div>
