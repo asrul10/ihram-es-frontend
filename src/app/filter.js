@@ -1,15 +1,16 @@
-function filterController($scope) {
+function filterController() {
 	var ctrl = this;
 
-	ctrl.date = '';
 	ctrl.sortPacket = '1';
 
 	$('#filter-tanggal').calendar({
 		type: 'month'
 	});	
 
-	ctrl.reset = function() {
-	};
+	$('#reset-filter').click(function(event) {
+		$('.date-ihram').val('');
+		$('.dropdown').dropdown('set selected', '1');
+	});
 }
 angular
     .module('app')

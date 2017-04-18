@@ -106,12 +106,12 @@ body {
     &.default {
       border-color: $default-gray;
       background: transparent;
-      color: $default-gray;
+      color: #636363;
       &:hover,
       &:active, 
       &:focus, 
       &:visited, {
-        color: $default-gray;
+        color: #636363;
         background: rgba(171, 171, 171, 0.19);
       }
     }
