@@ -2,8 +2,7 @@ angular
 	.module('app', ['ui.router'])
 	.run(metaTags)
 	.factory('mainService', mainService)
-	.factory('packetsService', packetsService)
-	.controller('appCtrl', appCtrl);
+	.factory('packetsService', packetsService);
 
 function metaTags() {
 	console.log("app run");
@@ -47,8 +46,4 @@ function packetsService($http) {
 	};
 
 	return objServices;
-}
-
-function appCtrl(mainService) {
-	console.log('msg');
 }
