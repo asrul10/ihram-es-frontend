@@ -1,10 +1,7 @@
-function mainController($http) {
+function mainController(mainService) {
 	var ctrl = this;
-	
-	$http({
-		method: 'GET',
-		url: services + '/front/data'
-	}).then(getData, errorData);
+
+	mainService.getData().then(getData, errorData);
 
 	function getData(response) {
 		var data = response.data;

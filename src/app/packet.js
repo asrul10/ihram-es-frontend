@@ -1,4 +1,4 @@
-function packetController($http) {
+function packetController(packetsService) {
 	var ctrl = this;
 	
 	ctrl.loading = '';
@@ -6,10 +6,7 @@ function packetController($http) {
 	ctrl.packetData = [];
 	ctrl.page = 0;
 
-	$http({
-		method: 'GET',
-		url: services + '/front/packet'
-	}).then(getData, errorData);
+	packetsService.getData().then(getData, errorData);
 
 	function getData(response) {
 		ctrl.loadingPage = '';
@@ -24,10 +21,7 @@ function packetController($http) {
 		ctrl.loading = 'loading';
 		ctrl.page += 1;
 
-		$http({
-			method: 'GET',
-			url: services + '/front/packet?page=' + ctrl.page
-		}).then(function(response) {
+		packetsService.getData(ctrl.page).then(function(response) {
 			if (response.data.length !== 0) {
 				for (var i = 0; i < response.data.length; i++) {
 					ctrl.packetData.push(response.data[i]);
