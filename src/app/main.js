@@ -1,17 +1,18 @@
-function mainController(mainService) {
+function mainController(mainService, navService) {
 	var ctrl = this;
 
-	mainService.getData().then(getData, errorData);
+	mainService.getData('home').then(getData, errorData);
+	ctrl.nav = {
+		logo: '',
+		items: navService.getData(0)
+	};
 
 	function getData(response) {
 		var data = response.data;
 		var content = data.content;
 
 		// Nav
-		ctrl.nav = {
-			logo: data.company.logo,
-			items: data.mainPage.nav.items
-		};
+		ctrl.nav.logo = data.company.logo;
 
 		// Footer
 		ctrl.footer = {
@@ -20,14 +21,8 @@ function mainController(mainService) {
 			social: data.company.social
 		};
 
-
-		/**
-		 * CONTENT
-		 */
-
 		// Header
 		ctrl.header = {
-			group: content.groups,
 			banner: content.header.banner
 		};
 		if (ctrl.header.banner) {

@@ -166,11 +166,9 @@ body {
     border-radius: 0 !important;
     color: $white !important;
     text-align: center;
-    &:focus {
-      border-top: 0 !important;
-      border-left: 0 !important;
-      border-right: 0 !important;
-    }
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
   }
   h1 {
     font-size: 2.5rem;

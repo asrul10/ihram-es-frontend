@@ -1,5 +1,11 @@
 <div id="app-container">
-	<h1>Profile Page</h1>
+	<ihram-nav-mobile nav-data="$ctrl.nav" class="ui vertical inverted sidebar menu left"></ihram-nav-mobile>
+	<div class="pusher">
+	    <div class="ui inverted center aligned ihram-section-header segment" style="{{$ctrl.header.banner}}">
+	        <ihram-nav nav-data="$ctrl.nav"></ihram-nav>
+	        <ihram-header header-data="$ctrl.header" motivation-mode="true"></ihram-header>
+	    </div>
+	</div>
 </div>
 
 <div class="ui ihram-error full" ng-if="!$ctrl.nav">

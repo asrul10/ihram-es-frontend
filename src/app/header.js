@@ -8,6 +8,7 @@ angular
 		templateUrl: 'app/header.html',
 		controller: headerController,
 		bindings: {
-			'headerData': '='
+			headerData: '=',
+			motivationMode: '='
 		}
 	});

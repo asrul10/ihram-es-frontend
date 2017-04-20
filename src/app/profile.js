@@ -1,21 +1,18 @@
-function profileController($http) {
+function profileController(mainService, navService) {
 	var ctrl = this;
 
-	$http({
-		method: 'GET',
-		url: services + '/front/data'
-	}).then(getData, errorData);
+	mainService.getData('profile').then(getData, errorData);
+	ctrl.nav = {
+		logo: '',
+		items: navService.getData(3)
+	};
 
 	function getData(response) {
-		console.log(response.data);
 		var data = response.data;
 		var content = data.content;
 
 		// Nav
-		ctrl.nav = {
-			logo: data.company.logo,
-			items: data.mainPage.nav.items
-		};
+		ctrl.nav.logo = data.company.logo;
 
 		// Footer
 		ctrl.footer = {
@@ -23,11 +20,6 @@ function profileController($http) {
 			email: data.company.email,
 			social: data.company.social
 		};
-
-
-		/**
-		 * CONTENT
-		 */
 
 		// Header
 		ctrl.header = {
@@ -37,18 +29,6 @@ function profileController($http) {
 		if (ctrl.header.banner) {
 			ctrl.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(' + ctrl.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
 		}
-
-		// Description
-		ctrl.description = content.description;
-
-		// Featured
-		ctrl.featured = {
-			company: data.company.company,
-			address: data.company.address,
-			countPackage: content.featured.countPackage,
-			countUsers: content.featured.countUsers,
-			icons: content.featured.icons
-		};
 
 		// Packet
 		ctrl.packet = content.packet;
