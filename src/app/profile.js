@@ -4,7 +4,7 @@ function profileController(mainService, navService) {
 	mainService.getData('profile').then(getData, errorData);
 	ctrl.nav = {
 		logo: '',
-		items: navService.getData(3)
+		items: navService.getData(2)
 	};
 
 	function getData(response) {
@@ -23,11 +23,10 @@ function profileController(mainService, navService) {
 
 		// Header
 		ctrl.header = {
-			group: content.groups,
 			banner: content.header.banner
 		};
 		if (ctrl.header.banner) {
-			ctrl.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(' + ctrl.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
+			ctrl.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(' + ctrl.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
 		}
 
 		// Packet
@@ -45,9 +44,3 @@ angular
         templateUrl: 'app/profile.html',
         controller: profileController
     });
-
-// Jquery
-$(function(){
-	$('select.dropdown').dropdown();
-	$('.ui.rating').rating('disable');
-});

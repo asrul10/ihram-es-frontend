@@ -23,10 +23,11 @@ function mainController(mainService, navService) {
 
 		// Header
 		ctrl.header = {
+			company: data.company.company,
 			banner: content.header.banner
 		};
 		if (ctrl.header.banner) {
-			ctrl.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(' + ctrl.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
+			ctrl.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(' + ctrl.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
 		}
 
 		// Description
@@ -41,6 +42,7 @@ function mainController(mainService, navService) {
 			icons: content.featured.icons
 		};
 	}
+	$('select.dropdown').dropdown();
 
 	function errorData(response) {
 		console.log('Error');
@@ -53,8 +55,3 @@ angular
         templateUrl: 'app/main.html',
         controller: mainController
     });
-
-// Jquery
-$(function(){
-	$('select.dropdown').dropdown();
-});

@@ -61,8 +61,7 @@ function navService($http) {
 	objServices.getData = function(active) {
 		var navbar = [
 			{'name': 'Home', 'active': false, 'url': '/home'},
-			{'name': 'Informasi Keberangkatan', 'active': false, 'url': '#'},
-			{'name': 'Informasi Jamaah', 'active': false, 'url': '#'},
+			{'name': 'Informasi', 'active': false, 'url': '#'},
 			{'name': 'Profil Biro', 'active': false, 'url': '/profile'}
 		];
 		navbar[active].active = true;
@@ -71,3 +70,8 @@ function navService($http) {
 
 	return objServices;
 }
+
+// Jquery
+$(function(){
+	$('select.dropdown').dropdown();
+});
