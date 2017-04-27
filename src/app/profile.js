@@ -29,8 +29,15 @@ function profileController(mainService, navService) {
 			ctrl.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(' + ctrl.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
 		}
 
-		// Packet
-		ctrl.packet = content.packet;
+		// Description
+		ctrl.description = {
+			company: data.company.company,
+			address: data.company.address,
+			phone: data.company.phone,
+			email: data.company.email,
+			icons: content.description.icons
+		};
+		console.log(ctrl.description);
 	}
 
 	function errorData(response) {

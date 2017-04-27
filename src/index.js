@@ -70,8 +70,3 @@ function navService($http) {
 
 	return objServices;
 }
-
-// Jquery
-$(function(){
-	$('select.dropdown').dropdown();
-});

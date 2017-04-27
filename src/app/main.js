@@ -42,7 +42,6 @@ function mainController(mainService, navService) {
 			icons: content.featured.icons
 		};
 	}
-	$('select.dropdown').dropdown();
 
 	function errorData(response) {
 		console.log('Error');

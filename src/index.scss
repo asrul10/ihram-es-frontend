@@ -13,6 +13,15 @@ body {
   &.hide {
     display: none !important;
   }
+  &.ihram-bagde {
+    max-width: 70px;
+  }
+  &.ihram-map {
+    border: 0;
+    width: 100%;
+    height: 350px;
+    margin: 20px 0;
+  }
   &.ihram-section-header, 
   &.ihram-section-content, 
   &.ihram-section-footer {
@@ -249,7 +258,7 @@ body {
   &.ihram-copyright {
     margin: 10px 0;
     padding: 15px 0;
-    border-top: 0.18rem solid #1e7083;
+    border-top: 2px solid #05343f;
   }
   &.fixed.menu.ihram-fixed-menu {
     top: 0;
