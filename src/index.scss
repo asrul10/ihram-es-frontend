@@ -30,6 +30,9 @@ body {
     box-shadow: none;
     border: none;
   }
+  &.ihram-section-footer {
+    margin-top: 5.7rem;
+  }
   &.segment {
     background-color: $white-gray;
   }
