@@ -2,8 +2,8 @@ function filterController() {
 	var vm = this;
 
 	vm.$onInit = function() {
+		$('.dropdown').dropdown();
 		vm.sortPacket = '1';
-		// $('.dropdown').dropdown();
 	};
 
 	// vm.$onChange = function() {
