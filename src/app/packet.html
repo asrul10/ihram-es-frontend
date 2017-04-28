@@ -5,10 +5,11 @@
     <div class="six wide column">
         <ihram-filter></ihram-filter>
     </div>
-    <div class="ui ten wide column segment" ng-class="$ctrl.loadingPage" id="list-packet">
-    	{{$ctrl.showDetail}}
-        <ihram-packet-cards cards-data='$ctrl.packetData'></ihram-packet-cards>
-        <button class="fluid ui button" ng-class="$ctrl.loading" ng-click="$ctrl.loadMore()">Berikutnya</button>
+    <div class="ui ten wide column segment" ng-class="vm.loadingPage" id="list-packet">
+    	{{vm.showDetail}}
+        <!-- <ihram-packet-cards cards-data='vm.packetData'></ihram-packet-cards> -->
+		<ihram-packet-card ng-repeat="packet in vm.packetData" card-data="packet"></ihram-packet-card>
+        <button class="fluid ui button" ng-class="vm.loading" ng-click="vm.loadMore()">Berikutnya</button>
     </div>
 </div>
 

@@ -9,13 +9,13 @@
                 <div class="ui calendar" id="filter-tanggal">
                     <div class="ui input left icon">
                         <i class="calendar icon"></i>
-                        <input type="text" ng-model="$ctrl.date" class="date-ihram" placeholder="Tanggal">
+                        <input type="text" ng-model="vm.date" class="date-ihram" placeholder="Tanggal">
                     </div>
                 </div>
             </div>
             <div class="field">
                 <label>Urutkan Packet</label>
-                <select name="group" ng-model="$ctrl.sortPacket" class="ui search dropdown">
+                <select name="group" ng-model="vm.sortPacket" class="ui search dropdown">
                     <option value="1">Paling Sesuai</option>
                     <option value="2">Paling Murah</option>
                     <option value="3">Paling Mahal</option>

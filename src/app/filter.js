@@ -1,7 +1,14 @@
 function filterController() {
-	var ctrl = this;
+	var vm = this;
 
-	ctrl.sortPacket = '1';
+	vm.$onInit = function() {
+		vm.sortPacket = '1';
+		// $('.dropdown').dropdown();
+	};
+
+	// vm.$onChange = function() {
+	// 	$('.dropdown').dropdown();
+	// };
 
 	$('#filter-tanggal').calendar({
 		type: 'month'
@@ -16,5 +23,6 @@ angular
     .module('app')
     .component('ihramFilter', {
         templateUrl: 'app/filter.html', 
+        controllerAs: 'vm',
         controller: filterController
     });

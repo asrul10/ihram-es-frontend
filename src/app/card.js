@@ -1,13 +1,17 @@
 function cardController() {
-	var ctrl = this;
+	var vm = this;
 	
-	ctrl.showDetail = function(event) {
+    vm.$onInit = function() {
+        vm.packetDetail = vm.cardData;
+    };
+
+	vm.showDetail = function(event) {
         var content = $(event.target).parents('.ihram-card-full').children('.content');
 		content.children('.ihram-card-grid').toggleClass('hide');
         content.find('.ihram-img').toggleClass('ihram-card-expand');
 	};
 
-    ctrl.showBooking = function(title, date) {
+    vm.showBooking = function(title, date) {
         $('.ui.modal').modal('setting', 'transition', 'fade up').modal('show');
         $('#title-card').html(title + ' ' + date + ' Hari');
     };
@@ -17,8 +21,9 @@ angular
     .module('app')
     .component('ihramPacketCard', {
         templateUrl: 'app/card.html',
+        controllerAs: 'vm',
         controller: cardController,
         bindings: {
-        	cardData: '='
+        	cardData: '<'
         }
     });

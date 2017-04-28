@@ -1,9 +1,9 @@
 <div id="app-container">
-	<ihram-nav-mobile nav-data="$ctrl.nav" class="ui vertical inverted sidebar menu left"></ihram-nav-mobile>
+	<ihram-nav-mobile nav-data="vm.nav" class="ui vertical inverted sidebar menu left"></ihram-nav-mobile>
 	<div class="pusher">
-	    <div class="ui inverted center aligned ihram-section-header segment" style="{{$ctrl.header.banner}}">
-	        <ihram-nav nav-data="$ctrl.nav"></ihram-nav>
-	        <ihram-header header-data="$ctrl.header" motivation-mode="true"></ihram-header>
+	    <div class="ui inverted center aligned ihram-section-header segment" style="{{vm.header.banner}}">
+	        <ihram-nav nav-data="vm.nav"></ihram-nav>
+	        <ihram-header header-data="vm.header" motivation-mode="true"></ihram-header>
 	    </div>
 		<div class="ui ihram-section-content segment">
 			<div class="ui grid container stackable ihram-padding ihram-desc">
@@ -22,7 +22,7 @@
 							<div class="ui items">
 								<div class="item">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{$ctrl.description.icons[0]}}">
+										<img src="{{vm.description.icons[0]}}">
 									</div>
 									<div class="middle aligned content">
 										<p>Izin Umroh D/461 TAHUN 2012</p>
@@ -30,7 +30,7 @@
 								</div>
 								<div class="item">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{$ctrl.description.icons[1]}}">
+										<img src="{{vm.description.icons[1]}}">
 									</div>
 									<div class="middle aligned content">
 										<p>Izin Haji</p>
@@ -38,7 +38,7 @@
 								</div>
 								<div class="item">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{$ctrl.description.icons[2]}}">
+										<img src="{{vm.description.icons[2]}}">
 									</div>
 									<div class="middle aligned content">
 										<div>
@@ -48,7 +48,7 @@
 								</div>
 								<div class="item">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{$ctrl.description.icons[3]}}">
+										<img src="{{vm.description.icons[3]}}">
 									</div>
 									<div class="middle aligned content">
 										<div>
@@ -62,7 +62,7 @@
 							<div class="ui items">
 								<div class="item">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{$ctrl.description.icons[4]}}">
+										<img src="{{vm.description.icons[4]}}">
 									</div>
 									<div class="middle aligned content">
 										<p>Provider Visa</p>
@@ -70,7 +70,7 @@
 								</div>
 								<div class="item">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{$ctrl.description.icons[5]}}">
+										<img src="{{vm.description.icons[5]}}">
 									</div>
 									<div class="middle aligned content">
 										<p>Jumlah Keberangkatan <br> 2500 - 5000 per tahun</p>
@@ -86,10 +86,10 @@
 				<div class="fourteen wide column">
 					<div class="ui grid stackable">
 						<div class="eight wide column">
-							<p><strong>{{$ctrl.description.company}}</strong> <br> {{$ctrl.description.address}}</p>
+							<p><strong>{{vm.description.company}}</strong> <br> {{vm.description.address}}</p>
 						</div>
 						<div class="eight wide column">
-							<p>Email : {{$ctrl.description.email}} <br> Phone : {{$ctrl.description.phone}}</p>
+							<p>Email : {{vm.description.email}} <br> Phone : {{vm.description.phone}}</p>
 						</div>
 					</div>
 					<iframe frameborder="0" class="ui ihram-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA-srPyfMSjTtREAi6WZREEua3hzy3xwU0&q=Ihram+Asia,Indonesia+surabaya" allowfullscreen></iframe>
@@ -99,10 +99,10 @@
 			<ihram-packet></ihram-packet>
 	    </div>
 		<div class="ui ihram-section-footer segment">
-			<ihram-footer footer-data="$ctrl.footer"></ihram-footer>
+			<ihram-footer footer-data="vm.footer"></ihram-footer>
 		</div>
 	</div>
 </div>
 
-<div class="ui ihram-error full" ng-if="!$ctrl.footer">
+<div class="ui ihram-error full" ng-if="!vm.footer">
 </div>

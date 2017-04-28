@@ -2,19 +2,19 @@
     <div class="content">
         <div class="ui stackable grid">
             <div class="nine wide ihram-img column">
-                <a class="header ihram-price" ng-click="$ctrl.showDetail($event)"><img ng-src="{{$ctrl.cardData.banner}}" style="width: 100%"></a>
+                <a class="header ihram-price" ng-click="vm.showDetail($event)"><img ng-src="{{vm.packetDetail.banner}}" style="width: 100%"></a>
             </div>
             <div class="seven wide column">
                 <p>Harga mulai dari</p>
-                <a class="header ihram-price" ng-click="$ctrl.showDetail($event)">{{$ctrl.cardData.harga}}<small>{{$ctrl.cardData.hargaChild}}</small></a>
+                <a class="header ihram-price" ng-click="vm.showDetail($event)">{{vm.packetDetail.harga}}<small>{{vm.packetDetail.hargaChild}}</small></a>
                 <div class="meta">
-                    <span class="date">{{$ctrl.cardData.date}} Hari</span>
+                    <span class="date">{{vm.packetDetail.date}} Hari</span>
                 </div>
                 <div class="description">
-                    <h3>{{$ctrl.cardData.program}}</h3>
+                    <h3>{{vm.packetDetail.program}}</h3>
                     <span class="ihram-fasilitas">Fasilitas</span>
                     <span ng-init="star = [1,2,3,4,5];">
-                        <i class="icon rating" ng-repeat="n in star" ng-class="n <= $ctrl.cardData.fasilitas ? 'star' : 'empty star'"></i>
+                        <i class="icon rating" ng-repeat="n in star" ng-class="n <= vm.packetDetail.fasilitas ? 'star' : 'empty star'"></i>
                     </span>
                 </div>
                 <p>Dapatkan diskon hingga Rp 500.000</p>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="sixteen wide column">
-                <button class="fluid ui primary button" ng-click="$ctrl.showBooking($ctrl.cardData.program, $ctrl.cardData.date)"><i class="checked calendar icon"></i>Pesan Sekarang</button>
+                <button class="fluid ui primary button" ng-click="vm.showBooking(vm.packetDetail.program, vm.packetDetail.date)"><i class="checked calendar icon"></i>Pesan Sekarang</button>
             </div>
         </div>
     </div>

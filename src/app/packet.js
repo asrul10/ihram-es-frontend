@@ -1,38 +1,34 @@
 function packetController(packetsService) {
-	var ctrl = this;
+	var vm = this;
 	
-	ctrl.loading = '';
-	ctrl.loadingPage = 'loading';
-	ctrl.packetData = [];
-	ctrl.page = 0;
+	vm.$onInit = function() {
+		vm.loading = '';
+		vm.loadingPage = 'loading';
+		vm.packetData = [];
+		vm.page = 0;
 
-	packetsService.getData().then(getData, errorData);
+		packetsService.getData().then(function(response) {
+			vm.loadingPage = '';
+			vm.packetData = response.data;
+		});
+	};
 
-	function getData(response) {
-		ctrl.loadingPage = '';
-		ctrl.packetData = response.data;
-	}
+	vm.loadMore = function() {
+		vm.loading = 'loading';
+		vm.page += 1;
 
-	function errorData(response) {
-		console.log('Error');
-	}
-
-	ctrl.loadMore = function() {
-		ctrl.loading = 'loading';
-		ctrl.page += 1;
-
-		packetsService.getData(ctrl.page).then(function(response) {
+		packetsService.getData(vm.page).then(function(response) {
 			if (response.data.length !== 0) {
 				for (var i = 0; i < response.data.length; i++) {
-					ctrl.packetData.push(response.data[i]);
+					vm.packetData.push(response.data[i]);
 				}
-				ctrl.loading = '';
+				vm.loading = '';
 			} else {
-				ctrl.loading = 'hide';
+				vm.loading = 'hide';
 			}
 		}, function(response) {
 			console.log('error');
-			ctrl.loading = '';
+			vm.loading = '';
 		});
 	};
 }
@@ -41,5 +37,6 @@ angular
     .module('app')
     .component('ihramPacket', {
         templateUrl: 'app/packet.html',
+        controllerAs: 'vm',
         controller: packetController
     });

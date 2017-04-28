@@ -1,14 +1,10 @@
-function headerController() {
-	$('select.dropdown').dropdown();
-}
-
 angular
 	.module('app')
 	.component('ihramHeader', {
 		templateUrl: 'app/header.html',
-		controller: headerController,
+		controllerAs: 'vm',
 		bindings: {
-			headerData: '=',
-			motivationMode: '='
+			headerData: '<',
+			motivationMode: '<'
 		}
 	});

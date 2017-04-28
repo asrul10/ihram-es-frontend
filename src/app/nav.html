@@ -1,10 +1,10 @@
 <div class="ui container">
 	<div class="ui large secondary ihram-menu menu">
 		<a class="toc item"><i class="sidebar icon"></i></a>
-		<a class="item ihram-logo"><img src="{{$ctrl.navData.logo}}" alt="Image"></a>
+		<a class="item ihram-logo"><img src="{{vm.navData.logo}}" alt="Image"></a>
 	    <div class="right menu">
-			<a class="item ihram-logo mobile-logo"><img src="{{$ctrl.navData.logo}}" alt="Image"></a>
-	    	<a class="item" ng-repeat="menu in $ctrl.navData.items" ng-class="menu.active ? 'active' : ''" href="{{menu.url}}"> <div class="ihram-menu-mark"></div> {{menu.name}}</a>
+			<a class="item ihram-logo mobile-logo"><img src="{{vm.navData.logo}}" alt="Image"></a>
+	    	<a class="item" ng-repeat="menu in vm.navData.items" ng-class="menu.active ? 'active' : ''" href="{{menu.url}}"> <div class="ihram-menu-mark"></div> {{menu.name}}</a>
 		    <a class="item ihram-btn"> User Login </a>
 	    </div>
 	</div>
