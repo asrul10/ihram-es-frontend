@@ -1,0 +1,32 @@
+<div class="ui card ihram-card-full">
+	<div class="content">
+		<div class="header">Cek Informasi Keberangkatan</div>
+	</div>
+	<div class="content">
+		<div class="ui form">
+			<div class="grouped fields">
+				<label>Pilih Jenis Kode</label>
+				<div class="field">
+				    <div class="ui radio checkbox" ng-click="vm.changeType('Kode Booking')">
+				        <input type="radio" name="type_code" ng-model="vm.typeCode" value="booking" tabindex="0" class="hidden type-code">
+				        <label>Kode Booking</label>
+				    </div>
+				</div>
+				<div class="field">
+				    <div class="ui radio checkbox" ng-click="vm.changeType('Kode Jamaah')">
+				        <input type="radio" name="type_code" ng-model="vm.typeCode" value="jamaah" tabindex="0" class="hidden type-code">
+				        <label>Kode Jamaah</label>
+				    </div>
+				</div>
+			</div>
+			<div class="field">
+                <label>Kode</label>
+                <input type="text" ng-model="vm.code" placeholder="{{vm.placeholder}}">
+			</div>
+		</div>
+	</div>
+	<div class="extra content">
+        <button class="ui ihram-btn primary button">Cek Kode</button>
+        <button class="ui ihram-btn default button" ng-click="vm.reset()">Reset</button>
+	</div>
+</div>

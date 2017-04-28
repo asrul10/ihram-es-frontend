@@ -5,6 +5,6 @@ angular
 		controllerAs: 'vm',
 		bindings: {
 			headerData: '<',
-			motivationMode: '<'
+			smallMode: '<'
 		}
 	});

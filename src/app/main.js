@@ -28,6 +28,8 @@ function mainController(mainService, navService) {
 			};
 			if (vm.header.banner) {
 				vm.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(' + vm.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
+			} else {
+				vm.header.banner = 'background: #0074a7';
 			}
 
 			// Description

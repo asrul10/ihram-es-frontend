@@ -1,11 +1,16 @@
-<header class="ui ihram-bg container" ng-class="vm.motivationMode ? 'small' : ''">
-	<div ng-if="!vm.motivationMode" class="ui ihram-header">
+<header class="ui ihram-bg container" ng-class="vm.smallMode ? 'small' : ''">
+	<div ng-if="!vm.smallMode" class="ui ihram-header">
 	    <h1>Cari Paket Umroh</h1>
 	    <h2>Tentukan Paket umroh terbaik yang sesuai dengan kebutuhan Anda.</h2>
 	    <ihram-search-packet></ihram-search-packet>
 	</div>
-	<div ng-if="vm.motivationMode" class="ui ihram-header-quote">
-		<h1><i class="quote left icon"></i>Et irure tempor minim laboris ea laborum fugiat esse.</h1>
-		<h2><i class="quote minus icon"></i>Lorem Ipsum</h2>
+	<div ng-if="vm.smallMode" class="ui ihram-header-quote">
+		<div ng-if="vm.headerData.informasi">
+			<h1>{{vm.headerData.informasi}}</h1>
+		</div>
+		<div ng-if="vm.headerData.profile">
+			<h1><i class="quote left icon"></i>{{vm.headerData.profile}}</h1>
+			<h2><i class="quote minus icon"></i>{{vm.headerData.from}}</h2>
+		</div>
 	</div>
 </header>

@@ -61,7 +61,6 @@ function navService($http) {
 	objServices.getData = function(active) {
 		var navbar = [
 			{'name': 'Home', 'active': false, 'url': '/home'},
-			{'name': 'Informasi', 'active': false, 'url': '#'},
 			{'name': 'Profil Biro', 'active': false, 'url': '/profile'}
 		];
 		navbar[active].active = true;

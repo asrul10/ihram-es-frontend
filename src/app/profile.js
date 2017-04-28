@@ -4,7 +4,12 @@ function profileController(mainService, navService) {
 	vm.$onInit = function() {
 		vm.nav = {
 			logo: '',
-			items: navService.getData(2)
+			items: navService.getData(1)
+		};
+		vm.header = {
+			banner: '',
+			profile: 'Et irure tempor minim laboris ea laborum fugiat esse.',
+			from: 'Lorem Ipsum'
 		};
 
 		mainService.getData('profile').then(function(response) {
@@ -22,11 +27,10 @@ function profileController(mainService, navService) {
 			};
 
 			// Header
-			vm.header = {
-				banner: content.header.banner
-			};
-			if (vm.header.banner) {
-				vm.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(' + vm.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
+			if (content.header.banner) {
+				vm.header.banner = 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(' + content.header.banner + '); background-size: cover; background-repeat: no-repeat; background-position: center;';
+			} else {
+				vm.header.banner = 'background: #0074a7';
 			}
 
 			// Description

@@ -4,10 +4,10 @@
 <div class="ui grid container ihram-packet-container stackable">
     <div class="six wide column">
         <ihram-filter></ihram-filter>
+        <br>
+		<ihram-check-keberangkatan></ihram-check-keberangkatan>
     </div>
     <div class="ui ten wide column segment" ng-class="vm.loadingPage" id="list-packet">
-    	{{vm.showDetail}}
-        <!-- <ihram-packet-cards cards-data='vm.packetData'></ihram-packet-cards> -->
 		<ihram-packet-card ng-repeat="packet in vm.packetData" card-data="packet"></ihram-packet-card>
         <button class="fluid ui button" ng-class="vm.loading" ng-click="vm.loadMore()">Berikutnya</button>
     </div>
