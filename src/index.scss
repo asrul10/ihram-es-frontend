@@ -10,6 +10,9 @@ body {
 }
 
 .ui {
+  &.loading.segment {
+    color: inherit !important;
+  }
   &.hide {
     display: none !important;
   }

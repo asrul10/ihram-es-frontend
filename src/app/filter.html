@@ -9,13 +9,13 @@
                 <div class="ui calendar" id="filter-tanggal">
                     <div class="ui input left icon">
                         <i class="calendar icon"></i>
-                        <input type="text" ng-model="vm.date" class="date-ihram" placeholder="Tanggal">
+                        <input type="text" class="date-ihram filter-date" placeholder="Tanggal">
                     </div>
                 </div>
             </div>
             <div class="field">
                 <label>Urutkan Packet</label>
-                <select name="group" class="ui search dropdown">
+                <select class="ui search dropdown filter-sort">
                     <option value="1">Paling Sesuai</option>
                     <option value="2">Paling Murah</option>
                     <option value="3">Paling Mahal</option>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="extra content">
-        <button class="ui ihram-btn primary button">Tampilkan</button>
+        <button class="ui ihram-btn primary button" ng-click="vm.filterSubmit()">Tampilkan</button>
         <button class="ui ihram-btn default button" id="reset-filter">Reset</button>
     </div>
 </div>

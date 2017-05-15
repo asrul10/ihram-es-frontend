@@ -35,11 +35,14 @@ function mainService($http) {
 function packetsService($http) {
 	var objServices = {};
 	var page = 0;
+	var sort = 1;
+	var date = '';
 
-	objServices.getData = function(page) {
-		var url = services + '/front/packet';
+	objServices.getData = function(page, sort, date) {
+		var filter = 'sort=' + sort + '&date=' + date;
+		var url = services + '/front/packet?' + filter;
 		if (page) {
-			url = services + '/front/packet?page=' + page;
+			url = services + '/front/packet?page=' + page + '&' + filter;
 		}
 
 		return $http({

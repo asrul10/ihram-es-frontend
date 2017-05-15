@@ -9,7 +9,7 @@ function filterController() {
 	// vm.$onChange = function() {
 	// 	$('.dropdown').dropdown();
 	// };
-
+	
 	$('#filter-tanggal').calendar({
 		type: 'month'
 	});	
@@ -24,5 +24,8 @@ angular
     .component('ihramFilter', {
         templateUrl: 'app/filter.html', 
         controllerAs: 'vm',
-        controller: filterController
+        controller: filterController,
+        bindings: {
+        	filterSubmit: '&'
+        }
     });

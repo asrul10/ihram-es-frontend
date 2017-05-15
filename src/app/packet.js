@@ -1,13 +1,15 @@
 function packetController(packetsService) {
 	var vm = this;
-	
+	var sort = 1;
+	var date = '';
+
 	vm.$onInit = function() {
 		vm.loading = '';
 		vm.loadingPage = 'loading';
 		vm.packetData = [];
 		vm.page = 0;
 
-		packetsService.getData().then(function(response) {
+		packetsService.getData(0, sort, date).then(function(response) {
 			vm.loadingPage = '';
 			vm.packetData = response.data;
 		});
@@ -17,7 +19,7 @@ function packetController(packetsService) {
 		vm.loading = 'loading';
 		vm.page += 1;
 
-		packetsService.getData(vm.page).then(function(response) {
+		packetsService.getData(vm.page, sort, date).then(function(response) {
 			if (response.data.length !== 0) {
 				for (var i = 0; i < response.data.length; i++) {
 					vm.packetData.push(response.data[i]);
@@ -29,6 +31,21 @@ function packetController(packetsService) {
 		}, function(response) {
 			console.log('error');
 			vm.loading = '';
+		});
+	};
+
+	vm.filterSubmit = function() {
+		vm.loading = '';
+		vm.loadingPage = 'loading';
+		vm.page = 0;
+
+		date = $('.filter-date').val();
+		sort = $('.filter-sort').find(":selected").val();
+
+		vm.loadingPage = 'loading';
+		packetsService.getData(0, sort, date).then(function(response) {
+			vm.loadingPage = '';
+			vm.packetData = response.data;
 		});
 	};
 }
