@@ -16,6 +16,10 @@ function checkController() {
 		$('.type-code[value="booking"]').prop('checked', true);
 		vm.code = '';
 	};
+
+    vm.showResult = function() {
+        $('#check-keberangkatan').modal('setting', 'transition', 'fade up').modal('show');
+    };
 }
 
 angular

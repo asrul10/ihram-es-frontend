@@ -12,7 +12,7 @@ function cardController() {
 	};
 
     vm.showBooking = function(title, date) {
-        $('.ui.modal').modal('setting', 'transition', 'fade up').modal('show');
+        $('#booking').modal('setting', 'transition', 'fade up').modal('show');
         $('#title-card').html(title + ' ' + date + ' Hari');
     };
 }
