@@ -33,23 +33,32 @@
                 <strong>Keberangkatan</strong>
                 <div class="ui list">
                     <div class="item">
-                        <i class="plane icon"></i>
+                        <i class="exchange icon"></i>
                         <div class="content">
                             <p>Rute Keberangkatan</p>
-                            <p>CGK - DOH - JED</p>
+                            <p>{{vm.packetDetail.rute.keberangkatan ? vm.packetDetail.rute.keberangkatan : 'Tidak ada rincian'}}</p>
                         </div>
                     </div>
                     <div class="item">
-                        <i class="plane icon"></i>
+                        <i class="exchange icon"></i>
                         <div class="content">
                             <p>Rute Kepulangan</p>
-                            <p>JED - DOH - CGK</p>
+                            <p>{{vm.packetDetail.rute.kepulangan ? vm.packetDetail.rute.kepulangan : 'Tidak ada rincian'}}</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="book icon"></i>
                         <div class="content">
-                            <p><a href="">Syarat & Ketentuan</a></p>
+                            <p><a href="#" ng-click="vm.showSyarat(vm.packetDetail.id)">Syarat & Ketentuan</a></p>
+                            <div class="ui small modal modal-syarat" id="syarat-{{vm.packetDetail.id}}">
+                                <div class="header">
+                                    <i class="checked calendar icon"></i> Syarat & Ketentuan
+                                </div>
+                                <div class="content">
+                                    <div class="description" ng-bind-html="vm.asHtml(vm.packetDetail.syarat)">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,21 +70,21 @@
                         <i class="bed icon"></i>
                         <div class="content">
                             <p>Double</p>
-                            <p>Rp 25.000.000,00</p>
+                            <p>{{vm.formatPrice(vm.packetDetail.hargaAll[1])}}</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="bed icon"></i>
                         <div class="content">
                             <p>Triple</p>
-                            <p>Rp 25.000.000,00</p>
+                            <p>{{vm.formatPrice(vm.packetDetail.hargaAll[2])}}</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="bed icon"></i>
                         <div class="content">
                             <p>Quad</p>
-                            <p>Rp 25.000.000,00</p>
+                            <p>{{vm.formatPrice(vm.packetDetail.hargaAll[3])}}</p>
                         </div>
                     </div>
                 </div>
@@ -84,24 +93,24 @@
                 <strong>Fasilitas</strong>
                 <div class="ui list">
                     <div class="item">
-                        <i class="users icon"></i>
+                        <i class="plane icon"></i>
                         <div class="content">
-                            <p>Maskapai Qatar Airways</p>
-                            <p>Tersisa 45 seat</p>
+                            <p>Maskapai</p>
+                            <p>{{vm.packetDetail.maskapai ? vm.packetDetail.maskapai : 'Tidak ada rincian'}}</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="building icon"></i>
                         <div class="content">
                             <p>Hotel Makkah</p>
-                            <p> AL - Massa</p>
+                            <p>{{vm.packetDetail.hotel.makkah ? vm.packetDetail.hotel.makkah : 'Tidak ada rincian'}}</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="building icon"></i>
                         <div class="content">
                             <p>Hotel Madinah</p>
-                            <p>Fairoz Shatta Hotel</p>
+                            <p>{{vm.packetDetail.hotel.madinah ? vm.packetDetail.hotel.madinah : 'Tidak ada rincian'}}</p>
                         </div>
                     </div>
                 </div>
