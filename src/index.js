@@ -1,5 +1,5 @@
 angular
-	.module('app', ['ui.router'])
+	.module('app', ['ui.router', 'ngclipboard'])
 	.run(metaTags)
 	.factory('mainService', mainService)
 	.factory('packetsService', packetsService)

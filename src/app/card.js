@@ -1,8 +1,9 @@
-function cardController() {
+function cardController($location) {
 	var vm = this;
 	
     vm.$onInit = function() {
         vm.packetDetail = vm.cardData;
+        vm.domain = $location.protocol() + "://" + $location.host() + ":" + $location.port();
     };
 
 	vm.showDetail = function(event) {
