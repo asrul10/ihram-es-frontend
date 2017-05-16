@@ -17,6 +17,7 @@ function filterController() {
 	$('#reset-filter').click(function(event) {
 		$('.date-ihram').val('');
 		$('.dropdown').dropdown('set selected', '1');
+		vm.filterSubmit();
 	});
 }
 angular
