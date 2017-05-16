@@ -1,15 +1,11 @@
-function searchController($scope, $http) {
-	var vm = this;
-
-	$('#search-tanggal').calendar({
-		type: 'month'
-	});	
+function searchController($scope, $http, $location) {
+    var vm = this;
 }
 
 angular
-	.module('app')
-	.component('ihramSearchPacket', {
-		templateUrl: 'app/searchPacket.html',
-		controllerAs: 'vm',
-		controller: searchController,
-	});
+    .module('app')
+    .component('ihramSearchPacket', {
+        templateUrl: 'app/searchPacket.html',
+        controllerAs: 'vm',
+        controller: searchController,
+    });
