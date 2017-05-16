@@ -10,6 +10,12 @@ body {
 }
 
 .ui {
+  &.hide-packet {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #000;
+  }
   &.loading.segment {
     color: inherit !important;
   }
