@@ -37,9 +37,13 @@ function packetsService($http) {
 	var page = 0;
 	var sort = 1;
 	var date = '';
+	var id = null;
 
-	objServices.getData = function(page, sort, date) {
+	objServices.getData = function(page, sort, date, id) {
 		var filter = 'sort=' + sort + '&date=' + date;
+		if (id) {
+			filter = filter + '&id=' + id;
+		}
 		var url = services + '/front/packet?' + filter;
 		if (page) {
 			url = services + '/front/packet?page=' + page + '&' + filter;

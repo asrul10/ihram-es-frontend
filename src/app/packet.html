@@ -8,6 +8,7 @@
 		<ihram-check-keberangkatan></ihram-check-keberangkatan>
     </div>
     <div class="ui ten wide column segment" ng-class="vm.loadingPage" id="list-packet">
+		<ihram-packet-card ng-repeat="packet in vm.packetDataShare" card-data="packet" card-shared="true"></ihram-packet-card>
 		<ihram-packet-card ng-repeat="packet in vm.packetData" card-data="packet"></ihram-packet-card>
         <button class="fluid ui button" ng-class="vm.loading" ng-click="vm.loadMore()">Berikutnya</button>
     </div>

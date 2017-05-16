@@ -20,7 +20,7 @@
                 <p>Dapatkan diskon hingga Rp 500.000</p>
             </div>
         </div>
-        <div class="ui stackable grid hide ihram-card-grid">
+        <div class="ui stackable grid ihram-card-grid" ng-class="vm.cardShared ? '' : 'hide'">
             <div class="sixteen wide column">
                 <button class="small ui facebook button"><i class="facebook icon"></i>Facebook</button>
                 <div class="small ui action input">
@@ -111,4 +111,7 @@
             </div>
         </div>
     </div>
+</div>
+<div ng-if="vm.packetDetail.id && vm.cardShared">
+    <h3>Paket lainnya mungkin anda tertarik</h3>
 </div>

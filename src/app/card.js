@@ -25,6 +25,7 @@ angular
         controllerAs: 'vm',
         controller: cardController,
         bindings: {
-        	cardData: '<'
+        	cardData: '<',
+            cardShared: '<'
         }
     });
