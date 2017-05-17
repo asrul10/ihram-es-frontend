@@ -8,7 +8,9 @@ $white-gray: #f7f7f7;
 body {
   background-color: $white-gray;
 }
-
+.pushable {
+  height: inherit;
+}
 .ui {
   &.hide-packet {
     position: absolute;
