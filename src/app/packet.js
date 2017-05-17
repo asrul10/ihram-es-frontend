@@ -1,8 +1,7 @@
-function packetController(packetsService, $location) {
+function packetController(packetsService, $stateParams, anchorSmoothScroll) {
 	var vm = this;
 	var sort = 1;
 	var date = '';
-	var params = $location.search();
 
 	vm.$onInit = function() {
 		vm.loading = '';
@@ -11,9 +10,15 @@ function packetController(packetsService, $location) {
 		vm.packetDataShare = [];
 		vm.page = 0;
 
-		if (typeof(params.packet) !== 'undefined') {
-			packetsService.getData(0, sort, date, params.packet).then(function(response) {
+		if (typeof($stateParams.packetId) !== 'undefined') {
+			var id = $stateParams.packetId;
+			var pieces = id.split('-');
+			id = pieces[pieces.length - 1];
+			packetsService.getData(0, sort, date, id).then(function(response) {
 				vm.packetDataShare = response.data;
+				angular.element(document).ready(function () {
+			        anchorSmoothScroll.scrollTo('packet-' + id);
+				});
 			});
 		}
 

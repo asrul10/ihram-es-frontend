@@ -1,4 +1,4 @@
-function searchController($scope, $http, $location, anchorSmoothScroll, $window) {
+function searchController($scope, $http, $location, anchorSmoothScroll) {
     var vm = this;
 
     vm.gotoElement = function(eID) {

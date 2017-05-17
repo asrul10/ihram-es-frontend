@@ -33,6 +33,13 @@ function cardController($location, $sce, $filter) {
         }
         return formated;
     };
+
+    vm.shareLink = function(data) {
+        var program = data.program;
+        program = program.toLowerCase();
+        program = program.replaceAll(' ', '-');
+        return vm.domain + '/paket/' + program + '-' + data.id;
+    };
 }
 
 angular

@@ -24,8 +24,8 @@
             <div class="sixteen wide column">
                 <button class="small ui facebook button"><i class="facebook icon"></i>Facebook</button>
                 <div class="small ui action input">
-                    <input type="text" value="{{vm.domain}}?packet={{vm.packetDetail.id}}#packet-{{vm.packetDetail.id}}">
-                    <button class="ui teal icon button btn-copy" ngclipboard data-clipboard-text="{{vm.domain}}?packet={{vm.packetDetail.id}}#packet-{{vm.packetDetail.id}}"><i class="copy icon"></i></button>
+                    <input type="text" value="{{vm.shareLink(vm.packetDetail)}}">
+                    <button class="ui teal icon button btn-copy" ngclipboard data-clipboard-text="{{vm.shareLink(vm.packetDetail)}}"><i class="copy icon"></i></button>
                 </div>
                 <a href="#" class="ui hide-packet" ng-click="vm.showDetail($event)"><i class="chevron up icon"></i></a>
             </div>
