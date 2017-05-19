@@ -9,6 +9,12 @@ function packetController(packetsService, $stateParams, anchorSmoothScroll) {
 		vm.packetData = [];
 		vm.packetDataShare = [];
 		vm.page = 0;
+		vm.jamaah = {
+			name: '',
+			phone: '',
+			email: '',
+			address: ''
+		};
 
 		if (typeof($stateParams.packetId) !== 'undefined') {
 			var id = $stateParams.packetId;
@@ -60,6 +66,20 @@ function packetController(packetsService, $stateParams, anchorSmoothScroll) {
 			vm.loadingPage = '';
 			vm.packetData = response.data;
 		});
+	};
+
+	vm.submitJamaah = function() {
+		vm.validateJamaah = {
+			name: '',
+			phone: '',
+			email: '',
+			address: ''
+		};
+		if (vm.jamaah.name === '') {
+			vm.validateJamaah.name = true;
+		}
+		console.log(vm.jamaah);
+		// $('#formPotensial').submit();
 	};
 }
 

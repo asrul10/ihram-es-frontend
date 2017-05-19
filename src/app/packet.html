@@ -23,67 +23,49 @@
             <div class="ui header text-left" id="title-card"></div>
             <p>Harga Paket Sudah Termasuk Perlengkapan Umroh.</p>
             <br>
-            <div class="ui form">
+            <form name="jamaahForm" id="formPotensial" novalidate class="ui form">
 	            <h3 class="ui dividing header">Data Pribadi<a class="anchor" id="types"></a></h3>
-				<div class="field">
+				<div class="field" ng-class="{'error' : jamaahForm.name.$invalid && !jamaahForm.name.$pristine}">
 				    <label>Nama</label>
 				    <div class="fields">
 				        <div class="seven wide field">
-				            <input type="text" placeholder="Nama lengkap">
+				            <input name="name" type="text" placeholder="Nama lengkap" maxlength="100" required ng-model="vm.jamaah.name">
 				        </div>
 				    </div>
 				</div>
-				<div class="field">
+				<div class="field" ng-class="{'error' : jamaahForm.phone.$invalid && !jamaahForm.phone.$pristine}">
 				    <label>Nomor Telepon</label>
 				    <div class="fields">
 				        <div class="five wide field">
-				            <input type="text" placeholder="085522277788">
+				            <input name="phone" type="number" placeholder="085522277788" maxlength="12" required ng-model="vm.jamaah.phone">
 				        </div>
 			        </div>
 				</div>
-				<div class="field">
+				<div class="field" ng-class="{'error' : jamaahForm.email.$invalid && !jamaahForm.email.$pristine}">
 				    <label>Email</label>
 				    <div class="fields">
 				        <div class="six wide field">
-				            <input type="text" placeholder="contoh@email.com">
+				            <input type="email" name="email" placeholder="contoh@email.com"  maxlength="100" required ng-model="vm.jamaah.email">
+				        </div>
+					</div>
+				</div>
+				<div class="field">
+				    <label>Alamat</label>
+				    <div class="fields">
+				        <div class="eight wide field">
+						    <textarea rows="2" ng-model="vm.jamaah.address"></textarea>
 				        </div>
 					</div>
 				</div>
 				<p>Setelah selesai melengkapi data kami akan menghubungi anda, untuk detail lebih lanjut.</p>
-<!-- 	            <h3 class="ui dividing header">Jumlah Jamaah<a class="anchor" id="types"></a></h3>
-				<div class="field">
-				    <label>Double</label>
-				    <div class="fields">
-				        <div class="two wide field ihram-room-field">
-						    <input type="text" placeholder="2">
-					   </div>
-				   </div>
-				</div>
-				<div class="field">
-				    <label>Triple</label>
-				    <div class="fields">
-				        <div class="two wide field ihram-room-field">
-						    <input type="text" placeholder="3">
-						</div>
-					</div>
-				</div>
-				<div class="field">
-				    <label>Quad</label>
-				    <div class="fields">
-				        <div class="two wide field ihram-room-field">
-						    <input type="text" placeholder="4">
-					    </div>
-				    </div>
-				</div>
-	            <h3 class="ihram-price-total">Total <span>Rp. 10.000.000,00</span></h3> -->
-			</div>
+			</form>
         </div>
     </div>
     <div class="actions">
         <div class="ui deny button">
             Kembali
         </div>
-        <div class="ui positive left labeled icon button disabled">
+        <div class="ui primary left labeled icon button" ng-click="vm.submitJamaah()">
             <i class="checkmark icon"></i>
             Selesai
         </div>

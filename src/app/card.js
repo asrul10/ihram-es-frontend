@@ -12,7 +12,9 @@ function cardController($location, $sce, $filter) {
         content.find('.ihram-img').toggleClass('ihram-card-expand');
 	};
 
-    vm.showBooking = function(title, date) {
+    vm.showBooking = function(data) {
+        var title = data.program;
+        var date = data.date;
         $('#booking').modal('setting', 'transition', 'fade up').modal('show');
         $('#title-card').html(title + ' ' + date + ' Hari');
     };
