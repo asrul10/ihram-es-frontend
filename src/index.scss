@@ -12,6 +12,11 @@ body {
   height: inherit;
 }
 .ui {
+  &.checkmark-container {
+    width: 173px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &.hide-packet {
     position: absolute;
     right: 10px;
@@ -384,5 +389,22 @@ body {
     &.ihram-featured-header {
       width: 100%;
     }
+  }
+}
+
+// Checkbox animate
+.checkmarkAnimate {
+  stroke: $default-theme;
+  stroke-dashoffset: 745.74853515625;
+  stroke-dasharray: 745.74853515625;
+  animation: dash 2s ease-out forwards;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 745.74853515625;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }

@@ -23,6 +23,7 @@
             <div class="ui header text-left" id="title-card"></div>
             <p>Harga Paket Sudah Termasuk Perlengkapan Umroh.</p>
             <br>
+            <div id="completed" style="display: none" class="ui checkmark-container"></div>
             <form name="jamaahForm" id="formPotensial" novalidate class="ui form">
 	            <h3 class="ui dividing header">Data Pribadi<a class="anchor" id="types"></a></h3>
 				<div class="field" ng-class="{'error' : jamaahForm.name.$invalid && !jamaahForm.name.$pristine}">
@@ -45,15 +46,15 @@
 				    <label>Email</label>
 				    <div class="fields">
 				        <div class="six wide field">
-				            <input type="email" name="email" placeholder="contoh@email.com"  maxlength="100" required ng-model="vm.jamaah.email">
+				            <input type="email" name="email" placeholder="contoh@email.com" maxlength="100" required ng-model="vm.jamaah.email">
 				        </div>
 					</div>
 				</div>
-				<div class="field">
+				<div class="field" ng-class="{'error' : jamaahForm.address.$invalid && !jamaahForm.address.$pristine}">
 				    <label>Alamat</label>
 				    <div class="fields">
 				        <div class="eight wide field">
-						    <textarea rows="2" ng-model="vm.jamaah.address"></textarea>
+						    <textarea rows="2" required ng-model="vm.jamaah.address"></textarea>
 				        </div>
 					</div>
 				</div>
@@ -65,7 +66,7 @@
         <div class="ui deny button">
             Kembali
         </div>
-        <div class="ui primary left labeled icon button" ng-click="vm.submitJamaah()">
+        <div class="ui primary left labeled icon button" ng-click="vm.submitJamaah()" id="submitJamaah" ng-class="vm.jamaah.name && vm.jamaah.phone && vm.jamaah.email && vm.jamaah.address ? '' : 'disabled'">
             <i class="checkmark icon"></i>
             Selesai
         </div>

@@ -15,6 +15,9 @@ function cardController($location, $sce, $filter) {
     vm.showBooking = function(data) {
         var title = data.program;
         var date = data.date;
+        $('#completed').hide();
+        $('#formPotensial').show();
+        $('#submitJamaah').show();
         $('#booking').modal('setting', 'transition', 'fade up').modal('show');
         $('#title-card').html(title + ' ' + date + ' Hari');
     };
