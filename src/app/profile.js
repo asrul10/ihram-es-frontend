@@ -1,4 +1,4 @@
-function profileController(mainService, navService) {
+function profileController(mainService, navService, $sce) {
 	var vm = this;
 
 	vm.$onInit = function() {
@@ -8,8 +8,8 @@ function profileController(mainService, navService) {
 		};
 		vm.header = {
 			banner: '',
-			profile: 'Et irure tempor minim laboris ea laborum fugiat esse.',
-			from: 'Lorem Ipsum'
+			profile: '',
+			from: ''
 		};
 
 		mainService.getData('profile').then(function(response) {
@@ -32,15 +32,30 @@ function profileController(mainService, navService) {
 			} else {
 				vm.header.banner = 'background: #0074a7';
 			}
+			vm.header.profile = content.header.profile;
+			vm.header.from = content.header.from;
+
+			// Legalitas
+			vm.split = content.description.icons.length / 2;
+			vm.newIcons = {firstRow: [], lastRow: []};
+			for (var i = 0; i < content.description.icons.length; i++) {
+				if (i < vm.split) {
+					vm.newIcons.firstRow.push(content.description.icons[i]);
+				} else {
+					vm.newIcons.lastRow.push(content.description.icons[i]);
+				}
+			}
 
 			// Description
 			vm.description = {
+				desc: content.description.desc,
 				company: data.company.company,
 				address: data.company.address,
 				phone: data.company.phone,
 				email: data.company.email,
-				icons: content.description.icons
-			};			
+				icons: content.description.icons,
+				map: $sce.trustAsResourceUrl('https://www.google.com/maps/embed/v1/place?key=AIzaSyA-srPyfMSjTtREAi6WZREEua3hzy3xwU0&q=' + data.company.map)
+			};
 		});
 	};
 }

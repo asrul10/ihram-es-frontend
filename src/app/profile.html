@@ -11,7 +11,7 @@
 			    	<h2>Deskripsi</h2>
 				</div>
 			    <div class="fourteen wide column">
-			    	<p>Consectetur esse in qui minim velit dolore ut adipisicing dolor dolor ullamco anim dolore adipisicing eiusmod aliquip occaecat ea non nostrud ut dolore eiusmod ullamco magna mollit dolore excepteur cillum ad dolor sed in qui est id et eiusmod nisi cupidatat consequat dolore anim labore amet consequat anim adipisicing velit dolore excepteur laborum pariatur exercitation amet occaecat ut occaecat exercitation veniam in aliqua commodo ad tempor irure irure non magna in veniam anim dolore sit culpa laboris irure excepteur culpa deserunt in amet enim in magna laboris cupidatat esse ea anim dolor in anim laborum magna in proident minim incididunt sed sint occaecat ut dolore minim mollit labore cupidatat ullamco amet magna cillum commodo do dolor reprehenderit est magna sed amet nisi commodo ullamco sit ea cupidatat reprehenderit dolor in amet sunt elit deserunt aliqua cillum ut deserunt aliquip ut cupidatat dolore commodo ullamco sint nisi dolor incididunt tempor eiusmod quis sunt elit sed velit sit consectetur officia mollit voluptate et eiusmod dolor tempor anim ullamco dolore culpa anim nulla sint elit mollit minim ea cupidatat quis aute ut ut veniam anim fugiat consequat pariatur anim in consequat.</p>
+			    	<p>{{vm.description.desc}}</p>
 				</div>
 			    <div class="two wide column">
 			    	<h2>Legalitas</h2>
@@ -20,60 +20,24 @@
 			    	<div class="ui grid stackable">
 			    		<div class="eight wide column">
 							<div class="ui items">
-								<div class="item">
+								<div class="item" ng-repeat="icon in vm.newIcons.firstRow">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{vm.description.icons[0]}}">
+										<img ng-src="{{icon.icon}}">
 									</div>
 									<div class="middle aligned content">
-										<p>Izin Umroh D/461 TAHUN 2012</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="ui circular image ihram-bagde">
-										<img src="{{vm.description.icons[1]}}">
-									</div>
-									<div class="middle aligned content">
-										<p>Izin Haji</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="ui circular image ihram-bagde">
-										<img src="{{vm.description.icons[2]}}">
-									</div>
-									<div class="middle aligned content">
-										<div>
-											<p>Agen maskapai resmi</p>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="ui circular image ihram-bagde">
-										<img src="{{vm.description.icons[3]}}">
-									</div>
-									<div class="middle aligned content">
-										<div>
-											<p>Agen hotel resmi</p>
-										</div>
+										<p>{{icon.desc}}</p>
 									</div>
 								</div>
 							</div>
 			    		</div>
 			    		<div class="eight wide column">
 							<div class="ui items">
-								<div class="item">
+								<div class="item" ng-repeat="icon in vm.newIcons.lastRow">
 									<div class="ui circular image ihram-bagde">
-										<img src="{{vm.description.icons[4]}}">
+										<img ng-src="{{icon.icon}}">
 									</div>
 									<div class="middle aligned content">
-										<p>Provider Visa</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="ui circular image ihram-bagde">
-										<img src="{{vm.description.icons[5]}}">
-									</div>
-									<div class="middle aligned content">
-										<p>Jumlah Keberangkatan <br> 2500 - 5000 per tahun</p>
+										<p>{{icon.desc}}</p>
 									</div>
 								</div>
 							</div>
@@ -92,7 +56,7 @@
 							<p>Email : {{vm.description.email}} <br> Phone : {{vm.description.phone}}</p>
 						</div>
 					</div>
-					<iframe frameborder="0" class="ui ihram-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA-srPyfMSjTtREAi6WZREEua3hzy3xwU0&q=Ihram+Asia,Indonesia+surabaya" allowfullscreen></iframe>
+					<iframe frameborder="0" class="ui ihram-map" src="{{vm.description.map}}" allowfullscreen></iframe>
 				</div>
 			</div>
 			<ihram-title title-data="Paket Umroh Terbaru"></ihram-title>
