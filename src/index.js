@@ -2,7 +2,8 @@ angular
 	.module('app', ['ui.router', 'ngclipboard'])
 	.run(metaTags)
 	.factory('mainService', mainService)
-	.factory('packetsService', packetsService)
+    .factory('packetsService', packetsService)
+	.factory('jamaahService', jamaahService)
 	.factory('navService', navService)
 	.service('anchorSmoothScroll', smoothScroll);
 
@@ -57,6 +58,20 @@ function packetsService($http) {
 	};
 
 	return objServices;
+}
+
+function jamaahService($http) {
+    var objServices = {};
+
+    objServices.postData = function(data) {
+        return $http({
+            method: 'POST',
+            url: services + '/front/savePotensial',
+            data: data
+        });
+    };
+
+    return objServices;
 }
 
 /**

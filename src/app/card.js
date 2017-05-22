@@ -20,6 +20,7 @@ function cardController($location, $sce, $filter) {
         $('#submitJamaah').show();
         $('#booking').modal('setting', 'transition', 'fade up').modal('show');
         $('#title-card').html(title + ' ' + date + ' Hari');
+        $('#ihram-id-program').val(data.id);
     };
 
     vm.showSyarat = function(id) {
