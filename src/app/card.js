@@ -3,7 +3,7 @@ function cardController($location, $sce, $filter) {
 	
     vm.$onInit = function() {
         vm.packetDetail = vm.cardData;
-        vm.domain = $location.protocol() + "://" + $location.host() + ":" + $location.port();
+        vm.domain = $location.protocol() + "://" + $location.host();
     };
 
 	vm.showDetail = function(event) {
@@ -44,7 +44,17 @@ function cardController($location, $sce, $filter) {
         var program = data.program;
         program = program.toLowerCase();
         program = program.replaceAll(' ', '-');
-        return vm.domain + '/paket/' + program + '-' + data.id;
+        return vm.domain + '/packet/' + program + '-' + data.id;
+    };
+
+    vm.facebookShare = function(data) {
+        var program = data.program;
+        program = program.toLowerCase();
+        program = program.replaceAll(' ', '-');
+        var url = vm.domain + '/packet/' + program + '-' + data.id;
+        var winTop = (screen.height / 2) - (350 / 2);
+        var winLeft = (screen.width / 2) - (520 / 2);
+        window.open('http://www.facebook.com/sharer.php?s=100&p[url]=' + url, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + 520 + ',height=' + 350);
     };
 }
 

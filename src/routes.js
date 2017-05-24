@@ -13,7 +13,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 			component: 'app'
 		})
 		.state('packet', {
-			url: '/paket/:packetId',
+			url: '/packet/:packetId',
 			component: 'app'
 		})
 		.state('profile', {

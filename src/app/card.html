@@ -1,7 +1,7 @@
 <div class="ui card ihram-card-full ihram-packet-card" id="packet-{{vm.packetDetail.id}}">
     <div class="content">
         <div class="ui stackable grid">
-            <div class="nine wide ihram-img column">
+            <div class="nine wide ihram-img column" ng-class="vm.cardShared ? 'ihram-card-expand' : ''">
                 <a class="header ihram-price" ng-click="vm.showDetail($event)"><img ng-src="{{vm.packetDetail.banner}}" style="width: 100%"></a>
             </div>
             <div class="seven wide column">
@@ -22,7 +22,7 @@
         </div>
         <div class="ui stackable grid ihram-card-grid" ng-class="vm.cardShared ? '' : 'hide'">
             <div class="sixteen wide column">
-                <button class="small ui facebook button"><i class="facebook icon"></i>Facebook</button>
+                <button class="small ui facebook button" ng-click="vm.facebookShare(vm.packetDetail)"><i class="facebook icon"></i>Facebook</button>
                 <div class="small ui action input">
                     <input type="text" value="{{vm.shareLink(vm.packetDetail)}}">
                     <button class="ui teal icon button btn-copy" ngclipboard data-clipboard-text="{{vm.shareLink(vm.packetDetail)}}"><i class="copy icon"></i></button>

@@ -1,4 +1,4 @@
-function navController() {
+function navController($window) {
 	var vm = this;
 
 	$('.ui.sidebar').sidebar({ context: $('#app-container') });
@@ -13,6 +13,10 @@ function navController() {
 			activeBar = true;
 		}
 	});
+
+	vm.redirectEs = function() {
+		$window.location.href = '/index.php/agent/auth/login';
+	};
 }
 
 angular

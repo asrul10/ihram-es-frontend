@@ -11,7 +11,8 @@ function metaTags() {
 	console.log("app run");
 }
 
-var services = 'http://localhost:8080';
+// var services = 'http://localhost:8080';
+var services = "//" + window.location.hostname;
 
 /**
  * Service Home Page

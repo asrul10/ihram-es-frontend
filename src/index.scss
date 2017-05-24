@@ -12,6 +12,11 @@ body {
   height: inherit;
 }
 .ui {
+  &.menu {
+    .item>img:not(.ui) {
+      width: inherit;
+    }
+  }
   &.checkmark-container {
     width: 173px;
     margin-left: auto;
@@ -92,7 +97,7 @@ body {
       &.ihram-logo {
         padding: 7px 0;
         img {
-          width: 150px;
+          max-height: 55px;
         }
         &.mobile-logo {
           img {
