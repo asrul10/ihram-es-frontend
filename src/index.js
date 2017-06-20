@@ -12,7 +12,7 @@ function metaTags() {
 }
 
 // var services = 'http://localhost:8080';
-var services = "//" + window.location.hostname;
+var services = "//" + window.location.hostname + ":" + window.location.port;
 
 /**
  * Service Home Page

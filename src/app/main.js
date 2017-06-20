@@ -18,7 +18,8 @@ function mainController(mainService, navService) {
 			vm.footer = {
 				phone: data.company.phone,
 				email: data.company.email,
-				social: data.company.social
+				social: data.company.social,
+				other: data.company.other
 			};
 
 			// Header
