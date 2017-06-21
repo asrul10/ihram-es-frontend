@@ -4,8 +4,14 @@ function mainController(mainService, navService) {
 	vm.$onInit = function() {
 		vm.nav = {
 			logo: '',
-			items: navService.getData(0)
+			items: ''
 		};
+		
+		navService.getData().then(function(response) {
+			var navbar = response.data;
+			navbar[0].active = true;
+			vm.nav.items = navbar;
+		});
 
 		mainService.getData('home').then(function(response) {
 			var data = response.data;

@@ -4,8 +4,15 @@ function profileController(mainService, navService, $sce) {
 	vm.$onInit = function() {
 		vm.nav = {
 			logo: '',
-			items: navService.getData(1)
+			items: ''
 		};
+		
+		navService.getData().then(function(response) {
+			var navbar = response.data;
+			navbar[1].active = true;
+			vm.nav.items = navbar;
+		});
+
 		vm.header = {
 			banner: '',
 			profile: '',

@@ -83,12 +83,12 @@ function navService($http) {
 	var active = 0;
 
 	objServices.getData = function(active) {
-		var navbar = [
-			{'name': 'Home', 'active': false, 'url': '/home'},
-			{'name': 'Profil Biro', 'active': false, 'url': '/profile'}
-		];
-		navbar[active].active = true;
-		return navbar;
+        var url = services + '/front/getNav';
+
+        return $http({
+            method: 'GET',
+            url: url
+        });
 	};
 
 	return objServices;
