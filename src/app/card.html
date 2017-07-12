@@ -68,23 +68,35 @@
                 <div class="ui list">
                     <div class="item">
                         <i class="bed icon"></i>
-                        <div class="content">
-                            <p>Double</p>
+                        <div class="content price-head">
+                            <p>Double <a href="#!" ng-click="vm.getDetail($event)" ng-if="vm.packetDetail.hargaDisc[1].anak || vm.packetDetail.hargaDisc[1].tanpa_ranjang"><i class="ellipsis vertical icon" style="margin: 0"></i>Detail</a></p>
                             <p>{{vm.formatPrice(vm.packetDetail.hargaAll[1])}}</p>
+                            <div class="price-detail" style="display: none">
+                                <p>Tanpa ranjang : <br>{{vm.formatPrice(vm.packetDetail.hargaDisc[1].anak)}}</p>
+                                <p>Anak dgn ranjang : <br>{{vm.formatPrice(vm.packetDetail.hargaDisc[1].tanpa_ranjang)}}</p>
+                            </div>
                         </div>
                     </div>
                     <div class="item">
                         <i class="bed icon"></i>
-                        <div class="content">
-                            <p>Triple</p>
+                        <div class="content price-head">
+                            <p>Triple <a href="#!" ng-click="vm.getDetail($event)" ng-if="vm.packetDetail.hargaDisc[2].anak || vm.packetDetail.hargaDisc[2].tanpa_ranjang"><i class="ellipsis vertical icon" style="margin: 0"></i>Detail</a></p>
                             <p>{{vm.formatPrice(vm.packetDetail.hargaAll[2])}}</p>
+                            <div class="price-detail" style="display: none">
+                                <p>Tanpa ranjang : <br>{{vm.formatPrice(vm.packetDetail.hargaDisc[2].anak)}}</p>
+                                <p>Anak dgn ranjang : <br>{{vm.formatPrice(vm.packetDetail.hargaDisc[2].tanpa_ranjang)}}</p>
+                            </div>
                         </div>
                     </div>
                     <div class="item">
                         <i class="bed icon"></i>
-                        <div class="content">
-                            <p>Quad</p>
+                        <div class="content price-head">
+                            <p>Quad <a href="#!" ng-click="vm.getDetail($event)" ng-if="vm.packetDetail.hargaDisc[3].anak || vm.packetDetail.hargaDisc[3].tanpa_ranjang"><i class="ellipsis vertical icon" style="margin: 0"></i>Detail</a></p>
                             <p>{{vm.formatPrice(vm.packetDetail.hargaAll[3])}}</p>
+                            <div class="price-detail" style="display: none">
+                                <p>Tanpa ranjang : <br>{{vm.formatPrice(vm.packetDetail.hargaDisc[3].anak)}}</p>
+                                <p>Anak dgn ranjang : <br>{{vm.formatPrice(vm.packetDetail.hargaDisc[3].tanpa_ranjang)}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -12,6 +12,10 @@ function cardController($location, $sce, $filter) {
         content.find('.ihram-img').toggleClass('ihram-card-expand');
 	};
 
+    vm.getDetail = function($event) {
+        $($event.target).parents('.price-head').children('.price-detail').toggle();
+    };
+
     vm.showBooking = function(data) {
         var title = data.program;
         var date = data.date;
