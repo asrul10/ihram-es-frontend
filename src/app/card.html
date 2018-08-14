@@ -11,7 +11,8 @@
                     <span class="date">{{vm.packetDetail.date}} Hari</span>
                 </div>
                 <div class="description">
-                    <h3>{{vm.packetDetail.program}}</h3>
+                    <h4 ng-click="vm.showDetail($event)" class="group-keberangkatan-label title-card-packet">{{vm.packetDetail.group}}</h4>
+                    <h3 ng-click="vm.showDetail($event)" class="title-card-packet">{{vm.packetDetail.program}}</h3>
                     <span class="ihram-fasilitas">Fasilitas</span>
                     <span ng-init="star = [1,2,3,4,5];">
                         <i class="icon rating" ng-repeat="n in star" ng-class="n <= vm.packetDetail.fasilitas ? 'star' : 'empty star'"></i>

@@ -301,6 +301,9 @@ body {
       line-height: 12px;
     }
   }
+  .title-card-packet {
+    cursor: pointer;
+  }
   .ihram-fasilitas {
     font-size: 1em;
     color: rgba(0, 0, 0, 0.4);
@@ -353,6 +356,12 @@ body {
     span {
       color: #21BA45;
     }
+  }
+  .group-keberangkatan-label {
+    margin-bottom: 0; 
+  }
+  i.icon.star.empty:before {
+    content: "\f005";
   }
 }
 @media only screen and (max-width: 700px) {
